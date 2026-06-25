@@ -59,7 +59,7 @@ export default async function ReferencesPage() {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {references.map((reference) => (
+              {references.map((reference: any) => (
                 <tr key={reference.id}>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="relative w-12 h-12">

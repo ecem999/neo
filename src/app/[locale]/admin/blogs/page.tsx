@@ -50,7 +50,7 @@ export default async function AdminBlogsPage() {
                 </td>
               </tr>
             ) : (
-              blogs.map((blog) => (
+              blogs.map((blog: any) => (
                 <tr key={blog.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">

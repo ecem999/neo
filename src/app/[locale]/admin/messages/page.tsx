@@ -60,7 +60,7 @@ export default function AdminMessagesPage() {
         body: JSON.stringify({ isRead: true }),
       });
       setMessages((prev) =>
-        prev.map((m) => (m.id === id ? { ...m, isRead: true } : m))
+        prev.map((m: any) => (m.id === id ? { ...m, isRead: true } : m))
       );
     } catch (error) {
       console.error("Mark as read error", error);
@@ -99,7 +99,7 @@ export default function AdminMessagesPage() {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {messages.map((message) => (
+              {messages.map((message: any) => (
                 <tr key={message.id} className={`hover:bg-gray-50 ${!message.isRead ? "bg-blue-50/30" : ""}`}>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {!message.isRead ? (
