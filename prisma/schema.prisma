@@ -1,0 +1,101 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Service {
+  id                     String   @id @default(uuid())
+  slug                   String   @unique
+  slugEn                 String?  @unique
+  title                  String
+  titleEn                String?
+  miniDescription        String
+  miniDescriptionEn      String?
+  iconPath               String
+  isFeaturedHome         Boolean  @default(false)
+  detailMainTitle        String
+  detailMainTitleEn      String?
+  detailSmallDescription String
+  detailSmallDescriptionEn String?
+  image1                 String
+  subTitle1              String
+  subTitle1En            String?
+  text1                  String
+  text1En                String?
+  image2                 String
+  subTitle2              String
+  subTitle2En            String?
+  text2                  String
+  text2En                String?
+  image3                 String
+  subTitle3              String
+  subTitle3En            String?
+  text3                  String
+  text3En                String?
+  order                  Int      @default(0)
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+}
+
+model Reference {
+  id             String   @id @default(uuid())
+  companyName    String
+  logoPath       String
+  websiteUrl     String?
+  isFeaturedHome Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Blog {
+  id             String   @id @default(uuid())
+  title          String
+  titleEn        String?
+  slug           String   @unique
+  slugEn         String?  @unique
+  summary        String
+  summaryEn      String?
+  content        String   @db.Text
+  contentEn      String?  @db.Text
+  imagePath      String
+  isPublished    Boolean  @default(true)
+  isFeaturedHome Boolean  @default(false)
+  author         String?  @default("Yazar")
+  tags           String?  @default("")
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Setting {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model ContactMessage {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  message   String   @db.Text
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Admin {
+  id        String   @id @default(uuid())
+  username  String   @unique
+  password  String
+  updatedAt DateTime @default(now()) @updatedAt
+}
