@@ -24,7 +24,7 @@ export default function FeaturesBanner() {
 
   return (
     <section className="py-12 bg-transparent relative z-10">
-      <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+      <div className="container mx-auto px-4 lg:px-8">
         
         {/* Title Outside the Box */}
         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
@@ -32,7 +32,7 @@ export default function FeaturesBanner() {
         </h3>
 
         {/* Box */}
-        <div className="w-full flex justify-start lg:-ml-16">
+        <div className="w-full flex justify-center">
           <div className="bg-white shadow-lg border border-gray-100 p-6 lg:px-12 w-full max-w-5xl text-center md:h-[200px] flex items-center justify-center">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
               {features.map((feature, index) => (

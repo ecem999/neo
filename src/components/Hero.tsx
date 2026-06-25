@@ -40,7 +40,7 @@ export default function Hero() {
         </div>
 
         {/* Stats Bar */}
-        <div className="pt-10 w-full flex justify-end lg:pr-16">
+        <div className="pt-10 w-full flex justify-center">
           <StatsBar />
         </div>
       </div>
