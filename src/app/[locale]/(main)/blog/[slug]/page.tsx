@@ -75,6 +75,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
       websiteUrl: true,
       isFeaturedHome: true,
       createdAt: true,
+      updatedAt: true,
     },
     orderBy: { createdAt: 'desc' }
   });

@@ -15,6 +15,7 @@ export default async function HakkimizdaPage() {
       websiteUrl: true,
       isFeaturedHome: true,
       createdAt: true,
+      updatedAt: true,
     },
     orderBy: { createdAt: 'desc' }
   });

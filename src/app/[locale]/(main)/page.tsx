@@ -22,6 +22,7 @@ export default async function Home() {
       websiteUrl: true,
       isFeaturedHome: true,
       createdAt: true,
+      updatedAt: true,
     },
     orderBy: { createdAt: 'desc' }
   });

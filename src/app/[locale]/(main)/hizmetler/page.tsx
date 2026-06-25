@@ -17,6 +17,7 @@ export default async function HizmetlerPage() {
       websiteUrl: true,
       isFeaturedHome: true,
       createdAt: true,
+      updatedAt: true,
     },
     orderBy: { createdAt: 'desc' }
   });
