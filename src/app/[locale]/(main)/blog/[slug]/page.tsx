@@ -100,7 +100,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
       
       {/* Blog Tags */}
       {blog.tags && (
-        <BlogTags tags={blog.tags.split(',').map(tag => tag.trim().startsWith('#') ? tag.trim() : `#${tag.trim()}`).filter(Boolean)} />
+        <BlogTags tags={blog.tags.split(',').map((tag: string) => tag.trim().startsWith('#') ? tag.trim() : `#${tag.trim()}`).filter(Boolean)} />
       )}
       
       {/* Pagination Navigation */}
