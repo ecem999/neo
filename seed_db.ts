@@ -13,7 +13,7 @@ async function main() {
     .filter(d => d.isDirectory() && !['blog', 'hakkimizda', 'hizmetler', 'referanslar'].includes(d.name))
     .map(d => d.name);
 
-  const services = [];
+  const services: any[] = [];
   let order = 1;
 
   for (const dir of pageDirs) {

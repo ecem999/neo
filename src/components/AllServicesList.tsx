@@ -18,7 +18,7 @@ export default async function AllServicesList() {
         </h3>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-8 text-left">
-          {services.map((service, index) => (
+          {services.map((service: any, index) => (
             <div key={index} className="flex items-center gap-3 text-gray-900 font-extrabold text-sm md:text-base">
               <span className="text-[#1a202c] text-xl font-black">›</span>
               {locale === 'en' ? (service.titleEn || service.title) : service.title}
